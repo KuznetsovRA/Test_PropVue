@@ -1,0 +1,48 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+  min-width: 100px; /* Минимальная ширина ячеек */
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  border: none;
+  background: transparent;
+}
+
+@media (max-width: 500px) {
+  .table {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 500px;
+  }
+
+  .table th,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table th {
+    background: #f4f4f4;
+  }
+
+  .table tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table tr:not(:first-child) {
+    border-top: 1px solid #ddd;
+  }
+}
